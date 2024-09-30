@@ -7,5 +7,5 @@ fn main() {
 
     println!("Hello {}!", first_name);
 
-    let testing: &str = "testing rust compiler"
+    let testing: &str = "testing rust compiler";
 }
