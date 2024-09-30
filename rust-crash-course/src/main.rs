@@ -3,6 +3,8 @@
 //* Constants variables than can never change */
 const MY_AGE: u8 = 22;
 
+mod ownership;
+
 fn main() {
     //* Constants Cont... */
     let _age_constant = MY_AGE;
@@ -62,4 +64,6 @@ fn main() {
     let _name_tupple_direct = personal_data.1;
 
     // You can iterate over tuples as well. Usually done in collections
+
+    ownership::ownership();
 }
