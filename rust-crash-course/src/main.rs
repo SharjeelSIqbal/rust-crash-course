@@ -57,11 +57,11 @@ fn main() {
     let personal_data = (22u8, "John");
 
     // Grabbing data
-    let (_age_tupple, _name_tupple) = personal_data;
+    let (_age_tuple, _name_tuple) = personal_data;
 
-    let _age_tupple_direct = personal_data.0;
+    let _age_tuple_direct = personal_data.0;
 
-    let _name_tupple_direct = personal_data.1;
+    let _name_tuple_direct = personal_data.1;
 
     // You can iterate over tuples as well. Usually done in collections
 

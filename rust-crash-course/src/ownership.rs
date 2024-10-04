@@ -1,4 +1,12 @@
 fn greet(name: &String) {
+
+
+  /* ----- Ownership Rules -----
+    1. Each value is Rust has a variable that's called its owner
+    2. There can only be one owner at a time
+    3. When the owner goes out of scope, the value is dropped
+
+   */
     println!("Hello {} pointer", name);
 }
 
@@ -110,7 +118,7 @@ pub fn ownership() {
     // Dangling references
     // Since this is returning a reference that exists within the stack and the heap it's wondering
     // how you're going to get rid of it?
-    fn get_name () -> &String {
-      &"John".to_string()
-    }
+    // fn get_name () -> &String {
+    //   &"John".to_string()
+    // }
 }
