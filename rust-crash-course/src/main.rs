@@ -3,9 +3,38 @@
 //* Constants variables than can never change */
 const MY_AGE: u8 = 22;
 
-mod ownership;
+// mod ownership;
+mod functions;
+
+fn _process_name(name: &str, callback: fn(&str) -> ()) {
+    callback(name);
+}
 
 fn main() {
+    let _say_hello_to = |name: &str| format!("Hello {}", name);
+    let _full_name = |first_name: &str, last_name: &str| format!("{} {}", first_name, last_name);
+    let _multiplied_by_two = |num: i32| num * 2;
+    let _ask_for_age = || println!("Something");
+
+    let ptr = _multiplied_by_two;
+    let _result = ptr(10);
+
+    fn str_function(name: &str) -> String {
+        format!("Hello {}", name)
+    }
+    // Returns a String
+    let _greeting = str_function("Sharjeel");
+
+    // println!("{}", greeting);
+
+    fn _void_function(name: &str) {
+        println!("Hello my name is {}", name);
+    }
+    // returns nothing
+
+    // void_function("Sharjeel");
+    // Prints "Hello my name is Sharjeel
+
     //* Constants Cont... */
     let _age_constant = MY_AGE;
     // Data Types
@@ -65,5 +94,8 @@ fn main() {
 
     // You can iterate over tuples as well. Usually done in collections
 
-    ownership::ownership();
+    // ownership::ownership();
+    let hello = functions::say_hello_world("Hello World!");
+
+    println!("{}", hello);
 }
